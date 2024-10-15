@@ -1,0 +1,596 @@
+.logo {
+  width: 200px;
+  height: 200px;
+}
+
+header {
+  margin-top: -100px;
+  padding: 0px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 200;
+  background-color: white;
+  width: 100%;
+  height: 120px;
+  border-radius:0px 0px 20px 20px;
+  
+}
+
+.nav-a {
+  text-decoration: none;
+  padding: 0px 5px;
+  font-size: 20px;
+  color: rgb(65, 63, 63);
+  transition: .2s;
+}
+
+i {
+  padding: 0px 5px;
+  font-size: 20px;
+  color: rgb(65, 63, 63);
+}
+
+.nav-a:hover {
+  color: #00698f;
+}
+
+.mostrar {
+  order: 1;
+  display: none;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.esconder {
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: linear-gradient(to bottom, rgba(173, 216, 230, 0.6), rgba(0, 162, 255, 0.8), rgba(0, 119, 187, 0.9), rgba(0, 119, 187, 1));
+  height:auto;
+}
+
+@media (max-width: 840px) {
+  .mostrar {
+      display: block;
+  }
+
+  .nav-select {
+      background-color: inherit;
+  }
+
+  .nav {
+      position: fixed;
+      width: 100%;
+      height: calc(100vh - 120px); /* Ajusta la altura para no cubrir el header */
+      background: white; /* Cambia el fondo para mejor visibilidad */
+      padding: 20px 0; /* Espaciado vertical */
+      text-align: center;
+      left: 0;
+      top: 120px;
+      display: none; /* Oculta el menú por defecto */
+      z-index: 10;
+  }
+
+  #check:checked + .mostrar + .nav {
+      display: block; /* Muestra el menú cuando el checkbox está activado */
+  }
+
+  .nav-a {
+      display: block;
+      padding: 10px 0px;
+      font-size: 18px; /* Ajusta el tamaño de la fuente para mejor legibilidad */
+  }
+
+  .esconder {
+      position: absolute;
+      right: 50px;
+      top: 20px; /* Ajusta la posición para que se vea mejor */
+  }
+
+  .carousel-container {
+      margin-top: 150px; /* Ajusta según la altura del menú */
+  }
+}
+#carousel-container {
+  position: relative;
+  max-width:1000px; /* Ajusta este valor según tus preferencias */
+  height: 83vh;
+  margin: 100px auto; /* Centra el carrusel */
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  position: relative; /* Para permitir el posicionamiento absoluto del texto */
+  text-align: center;
+}
+
+.carousel-item img {
+  width: 100%; /* Mantiene la imagen responsiva */
+  height: auto; /* Mantiene la proporción de la imagen */
+  max-height: 83vh; /* Limita la altura máxima de la imagen */
+  object-fit:cover; /* Asegura que la imagen se ajuste sin recortarse */
+  object-position: center; /* Centra la imagen */
+  border-radius: 10px;
+  display: block; /* Elimina espacios debajo de las imágenes */
+  margin: 0 auto; /* Centra la imagen en su contenedor */
+}
+.carousel-item h2 {
+  position: absolute; /* Posiciona el texto sobre la imagen */
+  left: 50%;
+  transform: translateX(-50%) scale(0); /* Empieza pequeño */
+  color:#f7f7f7; /* Color del texto */
+  transition: transform 0.3s ease; /* Transición suave */
+  top:30%; /* Ajusta la posición vertical */
+  font-size: 35px;
+}
+
+.carousel-item.active h2 {
+  transform: translateX(-50%) scale(1); /* Crece al ser activa */
+}
+
+.carousel-prev, .carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 24px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s;
+}
+
+.carousel-prev:hover, .carousel-next:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.carousel-prev {
+  left: 10px;
+}
+
+.carousel-next {
+  right: 10px;
+}
+
+/* Media Queries para mejorar la responsividad */
+@media (max-width: 768px) {
+  #carousel-container {
+    max-width: 90%; /* Ocupa más ancho en pantallas más pequeñas */
+    height: 70vh; /* Ajusta la altura si es necesario */
+  }
+
+  .carousel-prev, .carousel-next {
+    top: 50%; /* Mantiene los botones centrados verticalmente */
+    padding: 8px;
+    font-size: 20px; /* Reduce el tamaño de las flechas */
+    transform: translateY(-50%); /* Asegura que se mantengan centrados */
+  }
+
+  .carousel-item h2 {
+    font-size: 28px; /* Reduce el tamaño del título en pantallas pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  #carousel-container {
+    height: 60vh; /* Ajusta la altura en pantallas muy pequeñas */
+  }
+
+  .carousel-item h2 {
+    font-size: 24px; /* Reduce aún más el tamaño del título */
+  }
+
+  .carousel-prev, .carousel-next {
+    padding: 6px;
+    font-size: 18px; /* Ajusta el tamaño de las flechas para pantallas muy pequeñas */
+  }
+}
+
+.nav-select {
+  margin: 0 15px;
+  padding: 0px 5px;
+  border: none; /* Sin bordes */
+  border-radius: 5px; /* Bordes redondeados */
+  background-color:white; /* Color de fondo */
+  color: #333; /* Color del texto */
+  appearance: none; /* Quitar el estilo por defecto */
+  cursor: pointer; /* Cambiar el cursor */
+  width:90px;
+  font-size: 20px;
+  margin-left: -9px;
+  
+}
+
+
+
+
+.section {
+  margin: 0 130px; /* Margen lateral */
+}
+
+.titulo {
+  display: flex;
+  justify-content: center;
+}
+
+.container-sec {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se ajusten */
+  justify-content: space-between; /* Espacio entre elementos */
+}
+
+.move {
+  width: calc(50% - 20px); /* Ancho de 50% menos el margen */
+  max-width: 500px; /* Ancho máximo */
+}
+
+.icono {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0; /* Espacio entre iconos */
+  text-align: center; /* Centra el texto */
+}
+
+.titulo {
+  font-size: 40px; /* Tamaño del título */
+  border-bottom: 4px solid rgb(7, 7, 7);
+
+}
+
+/* Media Queries para mejorar la responsividad */
+@media (max-width: 768px) {
+  .section {
+    margin: 0 20px; /* Reduce los márgenes laterales en pantallas medianas */
+  }
+
+  .titulo {
+    font-size: 32px; /* Reduce el tamaño del título */
+  }
+
+  .move {
+    width: calc(50% - 20px); /* Mantiene dos columnas */
+    max-width: none; /* Elimina el ancho máximo */
+  }
+
+  .icono {
+    margin: 20px 0; /* Ajusta el espacio entre iconos */
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo {
+    font-size: 28px; /* Reduce aún más el tamaño del título */
+  }
+
+  .move {
+    width: 100%; /* Hace que cada elemento ocupe el 100% en pantallas pequeñas */
+    padding: 10px; /* Agrega algo de espaciado interno */
+  }
+
+  .icono p {
+    font-size: 14px; /* Ajusta el tamaño del texto de los párrafos */
+  }
+}
+
+.agregar {
+  background: url(./imagenes/lideres.jfif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width:90%;
+  height: 75vh; /* Mantiene la altura */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.banner {
+  display: flex;
+  justify-content: center;
+  width: 100%; /* Asegura que el banner ocupe todo el ancho */
+}
+
+.imagens {
+  display: flex;
+  justify-content: center; /* Centra los elementos */
+  align-items: center;
+  flex-direction: column; /* Apila verticalmente */
+  text-align: center; /* Centra el texto */
+  padding: 0 20px; /* Espaciado lateral */
+}
+
+.image {
+  width:300px; /* Tamaño inicial de la imagen */
+  height: auto; /* Mantiene la proporción */
+  margin-bottom: 20px; /* Espacio entre la imagen y el texto */
+}
+
+.title {
+  font-size: 24px; /* Ajusta el tamaño del título */
+  margin: 10px 0; /* Espaciado alrededor del título */
+}
+
+#animatedText {
+  font-size: 40px; /* Ajusta el tamaño de la fuente */
+  opacity: 0; /* Inicialmente oculto */
+  animation: fadeInOut 6s infinite; /* Añade la animación */
+  text-align: center; /* Centra el texto */
+  border-bottom: 2px solid black/
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0; /* Comienza oculto */
+  }
+  50% {
+    opacity: 1; /* Se vuelve visible */
+  }
+  100% {
+    opacity: 0; /* Vuelve a ocultarse */
+  }
+}
+
+#sub {
+  font-size: 50px; /* Tamaño inicial del subtítulo */
+}
+
+/* Media Queries para mejorar la responsividad */
+@media (max-width: 768px) {
+  .image {
+    width:50%; /* Ajusta el tamaño de la imagen en pantallas medianas */
+  }
+
+  #sub {
+    font-size: 36px; /* Reducir el tamaño del subtítulo */
+  }
+
+  #animatedText {
+    font-size: 32px; /* Reducir el tamaño del texto animado */
+  }
+}
+
+@media (max-width: 480px) {
+  .image {
+    width:50%; /* Aumenta el tamaño de la imagen en pantallas pequeñas */
+  }
+
+  #sub {
+    font-size: 28px; /* Reducir aún más el tamaño del subtítulo */
+  }
+
+  #animatedText {
+    font-size: 24px; /* Reducir aún más el tamaño del texto animado */
+  }
+}
+
+.containerr {
+    position: relative;
+    width: 100%;
+    height:100vh;
+ 
+}
+
+.text-containerr {
+  display: flex; /* Position text and image */
+  align-items: center;
+  justify-content: space-around;
+  padding:0px 20px;
+  min-height: 150px; /* Minimum height for the banner */
+  overflow: hidden; /* Hide image overflow for the curve effect */
+  color: white;
+  margin-right: 50px;  /* Space between text and image */
+}
+
+.text-containerr h1 {
+  color: black;
+  font-size:40px; /* Large heading */
+  border-bottom: 4px solid rgb(195,115,60);
+}
+
+.segundo{
+  width: 350px;
+  height: 350px;
+
+}
+
+@media (max-width: 768px) {
+  .text-containerr {
+      flex-direction: column; /* Cambiar a columna en pantallas más pequeñas */
+      align-items: center; /* Centrar elementos */
+  }
+
+  .text-containerr h1 {
+      font-size: 30px; /* Reducir tamaño del texto */
+      text-align: center; /* Centrar texto */
+  }
+
+  .segundo {
+      width: 60%; /* Ajustar el tamaño de la imagen */
+      max-width: 300px; /* Ancho máximo de la imagen */
+      height: auto; /* Mantener proporción de imagen */
+      margin-top:-40px; /* Espaciado superior */
+  }
+}
+
+@media (max-width: 480px) {
+  .text-containerr h1 {
+      font-size: 24px; /* Reducir aún más el tamaño del texto */
+  }
+
+  .segundo {
+      width: 80%; /* Hacer que la imagen ocupe un mayor ancho en pantallas pequeñas */
+      max-width: none; /* Eliminar el máximo ancho en pantallas muy pequeñas */
+  }
+}
+.azul {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  z-index: 10;
+  top: 300px;
+  border-radius: 80px 80px 60px 60px;
+  padding: 50px 100px;
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+  justify-content: space-between;
+  align-items: flex-start; /* Cambia a flex-start para un mejor alineamiento en columnas */
+}
+
+.contenido {
+  display: flex; /* Alinea icono y texto en fila */
+  align-items: center; /* Centra verticalmente */
+  margin-bottom: 20px; /* Espacio entre cada bloque */
+  flex: 1 1 calc(33% - 20px); /* Ajusta a un tercio del espacio disponible */
+  box-sizing: border-box; /* Incluye padding y borde en el cálculo del ancho */
+}
+
+.modificar {
+  width: 100%; /* Ocupa todo el ancho disponible */
+}
+
+.editar {
+  margin-right: 10px; /* Espacio entre icono y texto */
+}
+
+.tamaño h2 {
+  padding: 5px 0px;
+  margin: 0; /* Elimina margen por defecto */
+}
+
+.tamaño p {
+  display: block; /* Para que el texto esté en una nueva línea */
+  color: #070707; /* Color de texto */
+  font-size: 1.1em; /* Tamaño de texto */
+}
+
+.centra {
+  width: 350px;
+  height: auto;
+  text-align: center;
+  margin: 20px auto; /* Centra la imagen horizontalmente */
+}
+
+.centrar-img{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Media Queries para adaptarse a pantallas más pequeñas */
+@media (max-width: 768px) {
+  .contenido {
+    flex: 1 1 calc(50% - 20px); /* Dos columnas en pantallas medianas */
+  }
+
+  .azul {
+    padding: 30px 50px; /* Reduce el padding en pantallas medianas */
+  }
+}
+
+@media (max-width: 480px) {
+
+  .tamaño h2{
+    font-size:18px;
+  }
+  .contenido {
+    flex: 1 1 100%; /* Una columna en pantallas pequeñas */
+  }
+
+  .azul {
+    padding: 20px 20px; /* Reduce el padding en pantallas pequeñas */
+  }
+
+  .centra {
+    width: 100%; /* Hace que la imagen ocupe todo el ancho en pantallas pequeñas */
+  }
+}
+
+.final {
+  display: flex; /* Alinea icono y texto en fila */
+  margin-bottom: 20px; /* Espacio entre cada bloque */
+  flex: 1 1 calc(33% - 20px); /* Ajusta a un tercio del espacio disponible */
+  box-sizing: border-box; /* Incluye padding y borde en el cálculo del ancho */
+  padding: 120px 100px; /* Reduce el padding lateral para pantallas pequeñas */
+  min-height: 100vh;
+}
+
+.contenidos h2 {
+  font-size: 35px;
+  color: black; /* Color de subtítulos */
+  margin-top:25px; /* Espaciado superior */
+  padding:20px 0px;
+}
+
+.contenidos p {
+  font-size: 1.1em; /* Tamaño de texto */
+  color:black; /* Color del texto */
+  margin-bottom: 15px; /* Espaciado inferior */
+}
+
+footer {
+  margin-top: 30px; /* Espaciado superior */
+  text-align: center; /* Centrar texto */
+  font-size: 0.9em; /* Tamaño de texto más pequeño */
+  color: #666; /* Color de texto del pie */
+}
+
+footer p {
+  font-size: 1.1em; /* Tamaño de texto */
+  color: #333; /* Color del texto */
+  margin-bottom: 15px; /* Espaciado inferior */
+}
+
+.prueba {
+  display: flex;
+  align-items: center;
+  flex-direction: column; /* Cambia a columna para pantallas pequeñas */
+  text-align: start; /* Centra el texto */
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+  .final {
+    flex: 1 1 100%; /* Ocupa el 100% del ancho en pantallas pequeñas */
+    padding:350px 20px; /* Ajusta el padding para pantallas pequeñas */
+  }
+
+  .contenidos h2 {
+    font-size: 28px; /* Reduce el tamaño de fuente del título */
+  }
+
+  .contenidos p {
+    font-size: 1em; /* Reduce el tamaño de texto en párrafos */
+  }
+
+  footer p {
+    font-size: 0.9em; /* Reduce el tamaño de texto en el pie */
+  }
+}
+
+
+a{
+  text-decoration: none;
+  color: black;
+}

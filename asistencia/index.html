@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="./normalize.css/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="icon" href="./imagenes/logo.jfif" type="image/x-icon">
+    <title>KONTRASUM SPA</title>
+</head>
+<body>
+    <header>
+        
+        <img src="./imagenes/logo-remove.png" alt="" class="logo">
+        <input type="checkbox" id="check">
+        <label for="check" class="mostrar"><i class="fa-solid fa-bars"></i></label>
+      
+
+        <nav class="nav">
+            <a href="../index.html" class="nav-a"><i class="fa-solid fa-house"></i>Inicio</a>
+            <a href="../seccion-contactanos/contactanos.html" class="nav-a"><i class="fa-solid fa-user"></i>Nosotros</a>
+            <i class="fa-solid fa-paper-plane"></i>
+            <select class="nav-select" id="servicios" onchange="location = this.value;">
+                <option value="" class="etiqueta" disabled selected hidden>Servicios</option>
+                <option value="../index.html#servici">Servicios</option>
+                <option value="../seccion-contactos/section.html" class="nav-option">Cámaras Frigoríficas</option>
+                <option value="../seccion-instalacion/instalacion.html" class="nav-option">Instalación de Equipos</option>
+                <option value="../seccion-reparacion-mantenimiento/" class="nav-option">Reparaciones de Equipos</option>
+                <option value="../seccion-refrigeracion-industrial/index.html" class="nav-option">Refrigeración Comercial e Industrial</option>
+                <option value="../plan-de-mantenimiento/index.html" class="nav-option">Planes de Mantención</option>
+                <option value="../asistencia/index.html" class="nav-option">Asistencia 24 / 7</option>
+            </select>
+
+        
+            <a href="../index.html#contacto" class="nav-a"><i class="fa-solid fa-phone"></i>Contactos</a>
+            <label for="check" class="esconder"><i class="fa-solid fa-x"></i></label>
+        </nav>
+    </header>
+
+
+    <section class="camaras">
+        <div class="container">
+            <div class="titulo-container">
+                <h2 class="titulo3">Asistencia 24/7</h2>
+            </div>
+            <div class="carrusel-container">
+                <div class="carrusel">
+                    <img class="active" src="./imagenes/4.jpg" alt="Imagen 1">
+                    <img src="./imagenes/asistencia2.jfif" alt="Imagen 2">
+                    <img src="./imagenes/asistencia3.jfif" alt="Imagen 3">
+                    <img src="./imagenes/asistencia4.jfif" alt="Imagen 4">
+                    
+                    <!-- Agrega más imágenes según sea necesario -->
+                    <a href="#" id="anterior" class="boton">&lsaquo;</a>
+                    <a href="#" id="siguiente" class="boton">&rsaquo;</a>
+            
+                </div>
+    
+                <div class="frigorificos">
+                    <p>¡Tu tranquilidad es nuestra prioridad!
+
+                    En un mundo donde cada segundo cuenta, contar con asistencia 24/7 es esencial. Nuestro servicio está disponible para ti las 24 horas del día, los 7 días de la semana, porque sabemos que los imprevistos no tienen horario.</p>
+
+                    <h2>¿Por qué elegirnos?</h2>
+                    <ul>
+                        <li><strong>Atención inmediata:</strong>Estamos siempre listos para ayudarte, sin importar la hora. Tu necesidad es nuestra misión.</li>
+                        <li><strong>Expertos a tu servicio:</strong>Nuestro equipo está altamente capacitado para resolver cualquier situación con rapidez y eficacia.</li>
+                        <li><strong>Confianza y seguridad:</strong> Puedes contar con nosotros para proporcionarte soluciones que garanticen tu bienestar.</li>
+                    </ul>
+
+                    </p>No dejes que los problemas te sorprendan. Con nuestra asistencia 24/7, siempre tendrás un aliado a tu lado. ¡Contáctanos y experimenta la diferencia!.</p>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <script src="javascript.js"></script>
+</body>
+</html>

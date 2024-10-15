@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./normalize.css/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="icon" href="./imagenes/logo.jfif" type="image/x-icon">
+    <title>KONTRASUM SPA</title>
+</head>
+<body>
+
+    <header>
+        
+        <img src="./imagenes/logo-remove.png" alt="" class="logo">
+        <input type="checkbox" id="check">
+        <label for="check" class="mostrar"><i class="fa-solid fa-bars"></i></label>
+      
+
+        <nav class="nav">
+            <a href="../index.html" class="nav-a"><i class="fa-solid fa-house"></i>Inicio</a>
+            <a href="../seccion-contactanos/contactanos.html" class="nav-a"><i class="fa-solid fa-user"></i>Nosotros</a>
+            <i class="fa-solid fa-paper-plane"></i>
+            <select class="nav-select" id="servicios" onchange="location = this.value;">
+                <option value="" class="etiqueta" disabled selected hidden>Servicios</option>
+                <option value="../index.html#servici">Servicios</option>
+                <option value="../seccion-contactos/section.html" class="nav-option">Cámaras Frigoríficas</option>
+                <option value="../seccion-instalacion/instalacion.html" class="nav-option">Instalación de Equipos</option>
+                <option value="../seccion-reparacion-mantenimiento/reparacion.html" class="nav-option">Reparaciones de Equipos</option>
+                <option value="../seccion-refrigeracion-industrial/index.html" class="nav-option">Refrigeración Comercial e Industrial</option>
+                <option value="../plan-de-mantenimiento/index.html" class="nav-option">Planes de Mantención</option>
+                <option value="../asistencia/index.html" class="nav-option">Asistencia 24 / 7</option>
+            </select>
+            <a href="../index.html#contacto" class="nav-a"><i class="fa-solid fa-phone"></i>Contactos</a>
+            <label for="check" class="esconder"><i class="fa-solid fa-x"></i></label>
+        </nav>
+    </header>
+
+    <section class="camaras">
+        <div class="container">
+            <div class="titulo-container">
+                <h2 class="titulo3">Instalación de Equipos</h2>
+            </div>
+            <div class="carrusel-container">
+                <div class="carrusel">
+                    <img class="active" src="./imagenes/1.jpg" alt="Imagen 1">
+                    <img src="./imagenes/2.jpg" alt="Imagen 2">
+                    <img src="./imagenes/3.jpg" alt="Imagen 3">
+                    <img src="./imagenes/4.jpg" alt="Imagen 4">
+                    <img src="./imagenes/5.jpg" alt="Imagen 5">
+                    <img src="./imagenes/6.jpg" alt="Imagen 6">
+                    <img src="./imagenes/7.jpg" alt="Imagen 7">
+                    <img src="./imagenes/8.jpg" alt="Imagen 8">
+                    <img src="./imagenes/9.jpg" alt="Imagen 9">
+                    <img src="./imagenes/10.jpg" alt="Imagen 10">
+                    <img src="./imagenes/11.jpg" alt="Imagen 11">
+                    <img src="./imagenes/12.jfif" alt="Imagen 12">
+                    <img src="./imagenes/13.jfif" alt="Imagen 13">
+                    <img src="./imagenes/14.jfif" alt="Imagen 14">
+                    <img src="./imagenes/15.jfif" alt="Imagen 15">
+                    <img src="./imagenes/16.jfif" alt="Imagen 16">
+                    <img src="./imagenes/17.jfif" alt="Imagen 17">
+                    <img src="./imagenes/18.jfif" alt="Imagen 18">
+                    <img src="./imagenes/19.jfif" alt="Imagen 19">
+                    <img src="./imagenes/20.jfif" alt="Imagen 20">
+                    <img src="./imagenes/21.jfif" alt="Imagen 21">
+                    <!-- Agrega más imágenes según sea necesario -->
+                    <a href="#" id="anterior" class="boton">&lsaquo;</a>
+                    <a href="#" id="siguiente" class="boton">&rsaquo;</a>
+            
+                </div>
+    
+                <div class="frigorificos">
+                    <p>cada detalle cuenta. Nuestro compromiso es garantizar que cada sistema se integre de manera perfecta en tu espacio, proporcionando eficiencia y confort. Desde la elección del equipo adecuado hasta la colocación precisa, trabajamos con dedicación y profesionalismo.</p>
+
+                    <p> Cada instalación está diseñada para optimizar el rendimiento, asegurando un ambiente fresco y agradable. Nuestros técnicos capacitados utilizan las mejores prácticas y tecnología avanzada, lo que no solo mejora la calidad del aire, sino que también reduce el consumo energético.</p>
+
+                    <p>Confía en nosotros para transformar tu hogar o negocio en un lugar acogedor, donde cada rincón respira confort. Con un enfoque en la confianza y la satisfacción del cliente, hacemos de cada instalación una experiencia sin igual.</p>
+                   
+                </div>
+    
+            </div>
+
+            <h4>Equipos que Instalamos</h4>
+            <ul>
+                <li>Instalación de equipos de aire acondicionado VRF, Chiller, Split, split ducto, piso Cielo, compacto.</li>
+                <li>cámaras de frío.</li>
+                <li>Temperado de piscinas.</li>
+                <li>Instalacion de ductos.</li>
+            </ul>
+        </div>
+    </section>
+
+    <script src="javascript.js"></script>
+    
+</body>
+</html>

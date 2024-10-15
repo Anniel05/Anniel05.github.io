@@ -1,0 +1,268 @@
+body{
+    font-size: 'Arial', sans-serif;
+}
+  
+
+.logo{
+    width:200px;
+    height:200px;
+}
+
+header{
+    padding: 0px 50px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 200;
+    background-color: #fcfcfc;
+    width: 100%;
+    height:120px;
+    border-radius:0px 0px 20px 20px;
+}
+
+.nav-a{
+    text-decoration: none;
+    padding: 0px 5px;
+    font-size: 20px;
+    color: rgb(65, 63, 63);
+    transition: .2s;
+    
+}
+
+i{
+    padding: 0px 5px;
+    font-size: 20px;
+    color: rgb(65, 63, 63);
+}
+
+
+.nav-a:hover{
+ color:  #00698f;
+}
+
+.mostrar{
+    order: 1;
+    display: none;
+    border: 1px solid black;
+    border-radius:5px;
+}
+
+.esconder{
+    display: none;
+}
+
+#check{
+display: none;
+}
+
+
+
+
+
+@media (max-width: 840px) {
+
+    .mostrar{
+      display: block;
+    }
+  
+  
+  
+    .nav-select{
+      background-color: inherit;
+    }
+  
+    .nav{
+      position:fixed;
+      width: 100%;
+      height: 100vh;
+      background:white;
+      padding: 0px 20px;
+      text-align:end;
+      left: 0;
+      top:120px;
+      display: none;
+      z-index: 10;
+    
+      
+    }
+  
+    .nav.show{
+      display: block;
+    }
+  
+    .nav-a{
+     display: block;
+     padding: 10px 0px;
+     
+    }
+  
+    
+  
+     .esconder{
+      position:absolute;
+      right:50px;
+      top:-91px;
+       }
+  
+  
+    .esconder.show{
+      display: block;
+    }
+     
+    .mostrar.hide{
+      display: none;
+    }
+  
+  
+    .carousel-container {
+      margin-top: 150px; /* Ajusta según la altura del menú */
+  }
+   
+  }
+
+  .nav-select {
+    margin: 0 15px;
+    padding: 0px 5px;
+    border: none; /* Sin bordes */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color:#fcfcfc; /* Color de fondo */
+    color: #333; /* Color del texto */
+    appearance: none; /* Quitar el estilo por defecto */
+    cursor: pointer; /* Cambiar el cursor */
+    width:90px;
+    font-size: 20px;
+    margin-left: -9px;
+  }  
+
+  .camaras {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:150px 50px;
+    background: linear-gradient(to bottom, #ffffff, #0077bb);
+    overflow-y: auto;
+    
+}
+
+
+.titulo-container {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.titulo3 {
+    font-size: 40px;
+    font-weight: bold;
+    border-bottom: 5px solid white;
+}
+
+.carrusel-container {
+    display: flex;
+    justify-content: center; /* Centra el contenido */
+}
+
+.carrusel {
+    width: 50%;
+    height:380px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+}
+
+.carrusel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s;
+}
+
+.carrusel img.active {
+    opacity: 1;
+}
+
+.carrusel img:not(.active) {
+    opacity: 0;
+}
+
+.boton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo semi-transparente */
+    border: none;
+    border-radius: 5px;
+}
+
+#anterior {
+    left: 10px; /* A la izquierda */
+}
+
+#siguiente {
+    right: 10px; /* A la derecha */
+}
+
+.frigorificos {
+    width: 50%;
+    margin-left: 20px;
+}
+
+.frigorificos p {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.frigorificos ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.frigorificos li {
+    margin-bottom: 10px;
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 840px) {
+    .camaras {
+        padding-top: 150px; /* Ajusta el espacio superior en pantallas pequeñas */
+    }
+
+
+
+    .carrusel-container {
+        flex-wrap: wrap; /* Permite que el contenido se ajuste en líneas */
+    }
+
+    .carrusel {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        height:350px; /* Ajusta la altura en pantallas pequeñas */
+    }
+
+    .frigorificos {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        margin-left: 0; /* Elimina el margen izquierdo */
+        margin-top: 20px; /* Espacio entre carrusel y contenido */
+    }
+
+    .frigorificos h3 {
+        font-size: 1.2rem; /* Ajusta el tamaño de fuente */
+    }
+
+    .frigorificos li {
+        font-size: 1rem; /* Ajusta el tamaño de fuente de los ítems de la lista */
+    }
+
+    .titulo3{
+        font-size: 35px;
+    }
+}
+
+

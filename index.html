@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stilo.css">
+   <link rel="stylesheet" href="normalize.css/normalize.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+   <link rel="icon" href="./imagenes/logo.jfif" type="image/x-icon">
+    <title>KONTRASUM SPA</title>
+</head>
+<body>
+
+  
+  <header>
+        <img src="./imagenes/logo-remove.png" alt="" class="logo">
+        <input type="checkbox" id="check">
+        <label for="check" class="mostrar"><i class="fa-solid fa-bars"></i></label>
+      
+
+        <nav class="nav">
+            <a href="" class="nav-a"><i class="fa-solid fa-house"></i>Inicio</a>
+            <a href="./seccion-contactanos/contactanos.html" class="nav-a"><i class="fa-solid fa-user"></i>Nosotros</a>
+            <i class="fa-solid fa-paper-plane"></i>
+            <select class="nav-select" id="servicios" onchange="location = this.value;">
+              <option value="" class="etiqueta" disabled selected hidden>Servicios</option>
+              <option value="#servici">Servicios</option>
+              <option value="./seccion-contactos/section.html" class="nav-option">Cámaras Frigoríficas</option>
+              <option value="./seccion-instalacion/instalacion.html" class="nav-option">Instalación de Equipos</option>
+              <option value="./seccion-reparacion-mantenimiento/reparacion.html" class="nav-option">Reparaciones de Equipos</option>
+              <option value="./seccion-refrigeracion-industrial/index.html" class="nav-option">Refrigeración Comercial e Industrial</option>
+              <option value="./plan-de-mantenimiento/index.html" class="nav-option">Planes de Mantenimiento</option>
+              <option value="./asistencia/index.html" class="nav-option">Asistencia 24 / 7</option>
+          </select>
+          
+        
+            <a href="#contacto" class="nav-a"><i class="fa-solid fa-phone"></i>Contactos</a>
+            <label for="check" class="esconder"><i class="fa-solid fa-x"></i></label>
+        </nav>
+    </header>
+       
+
+          <div id="carousel-container">
+            <!-- Contenedor de las imágenes del carrusel -->
+            <div class="carousel-inner">
+              <!-- Imagen 1 -->
+              <div class="carousel-item active">
+                <img src="./imagenes/frigorifica.jpg" alt="Traducción e Interpretación">
+                <h2>Cámaras Frigoríficas</h2>
+    
+              </div>
+              <!-- Imagen 2 -->
+              <div class="carousel-item">
+                <img src="./imagenes/instalacion.jfif" alt="Capacitación y Coaching">
+                <h2>Instalación de aires acondicionados</h2>
+                
+              </div>
+              <!-- Imagen 3 -->
+              <div class="carousel-item">
+                <img src="./imagenes/reparacion.jfif" alt="Asesoría y Consultoría">
+                <h2>Reparaciones de aires acondicionado</h2>
+                
+              </div>
+              <!-- Imagen 4 -->
+              <div class="carousel-item">
+                <img src="./imagenes/industrial.jpg" alt="Desarrollo de Contenidos">
+                <h2>refrigeración comercial e industrial</h2>
+                
+              </div>
+              <!-- Imagen 5 -->
+              <div class="carousel-item">
+                <img src="./imagenes/mantencion.jpg" alt="Servicios de Idiomas">
+                <h2>Planes de Mantencion</h2>
+                
+              </div>
+
+              <!-- Imagen 6 -->
+              <div class="carousel-item">
+                <img src="./imagenes/conductos.jfif" alt="Servicios de Idiomas">
+                <h2>Instalacion de Conductos</h2>
+                
+              </div>
+
+                 <!-- Imagen 7 -->
+
+                 <div class="carousel-item">
+                  <img src="./imagenes/asistencia.jpg" alt="Servicios de Idiomas">
+                  <h2>Asistencia 24/7</h2>
+                  
+                </div>
+            </div>
+            <!-- Flechas de navegación -->
+            <a class="carousel-prev" href="#">&lsaquo;</a>
+            <a class="carousel-next" href="#">&rsaquo;</a>
+          </div>
+
+
+          <div class="section" id="servici" >
+               <div class="titulo">
+                <h1 class="titulo">Conoce Nuestros Servicios</h1>
+               </div>
+                <div class="container-sec">
+                  <div class="move icono">
+                    <i class="fa-solid fa-snowflake"></i>
+                      <div>
+                        <a href="./seccion-contactos/section.html"><h2>Cámaras Frigoríficas</h2></a>
+                        <p id="titulos-icon">Lideres en implementación, instalación y puesta en marcha de camaras de frio para todo tipo de empresas y requerimientos.</p>
+                      </div>
+                  
+                  </div>
+  
+                  <div class="move icono">
+                    <i class="fa-solid fa-house-medical"></i>
+                    <div>
+                      <a href="./seccion-instalacion/instalacion.html"><h2>Instalación de Equipos  Climatizadores</h2></a>
+                      <p id="titulos-icon">Instalamos climatizadores en hogares e Industrias, asegurando el confort de quienes acceden a nuestros servicios y productos</p>
+                    </div>
+                  </div>
+  
+                  <div class="move icono">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                    <div>
+                    <a href="./seccion-reparacion-mantenimiento/reparacion.html"><h2>Reparaciones de Equipos  Climatizadores</h2></a>
+                    <p id="titulos-icon">Devuélvele el frescor a tu espacio con nuestras reparaciones de aires acondicionados. Expertos a tu servicio, listos para resolver cualquier problema y garantizar tu confort al instante.</p>
+                    </div>
+                  </div>
+
+                
+
+                  <div class="move icono">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                    <div>
+                    <a href="./seccion-instalacion/instalacion.html"><h2>Instalacion de Ductos</h2></a>
+                    <p id="titulos-icon">La instalación de ductos en sistemas de aire acondicionado asegura la correcta distribución del aire frío o caliente en espacios. Incluye el diseño, montaje y aislamiento de los conductos para optimizar el rendimiento y eficiencia energética del sistema.</p>
+                    </div>
+                  </div>
+
+                  <div class="move icono">
+                    <i class="fa-solid fa-snowflake"></i>
+                    <div>
+                    <a href="./seccion-refrigeracion-industrial/index.html"><h2>Refrigeración Comercial e Industrial</h2></a>
+                    <p id="titulos-icon">Realizamos la inspección técnica y planificación para diseño de camaras frigorificas.</p>
+                    </div>
+                  </div>
+  
+                  <div class="move icono">
+                    <i class="fa-solid fa-snowflake"></i>
+                    <div>
+                    <a href="./plan-de-mantenimiento/index.html"><h2>Planes de Mantenimiento</h2></a>
+                    <p id="titulos-icon" >Realizamos planes de mantenimiento a camaras de media temperatura, tableros eléctricos, unidades condensadoras y líquido refrigerante..</p>
+                    </div>
+                  </div>
+  
+                  <div class="move icono">
+                  <i class="fa-solid fa-snowflake"></i>
+                 <div>
+                  <a href="./asistencia/index.html"><h2>Asistencia 24 / 7</h2></a>
+                  <p id="titulos-icon">Contamos con asistencia en terreno para asegurar todos los trabajos realizados a nuestros clientes.</p>
+                 </div>
+                  </div>
+  
+                  </div>
+          </div>
+
+          <div class="banner">
+            <div class="imagens agregar">
+              <img src="./imagenes/logo-remove.png" alt="" class="image">
+              <div class="mostador">
+                <h2 id="sub">Lideres en </h2>
+                <p id="animatedText"></p>
+              </div>
+            </div>
+        </div>
+
+        <div class="containerr">
+          <div class="text-containerr">
+              <h1>INGENIERÍA Y EXPERIENCIA</h1>
+              <img src="./imagenes/logo-remove.png" alt="Imagen representativa" class="segundo">
+        </div>
+
+        <div class="azul">
+          <div class="modificar">
+            <div class="contenido">
+              <div class="editar">
+                  <i class="fa-solid fa-users edi"></i>
+              </div>
+              <div class="tamaño">
+                  <h2>Profesionalismo</h2>
+                  <p>Ponemos a su disposición, profesionales con una sólida formación académica y entrenamiento según estándares internos, tanto en materias técnicas como de gestión y administración de proyectos, junto a esto el mejor respaldo técnico y equipamiento acorde a sus objetivos.</p>
+              </div>
+          </div>
+      
+          <div class="contenido">
+              <div class="editar">
+                <i class="fa-solid fa-pen"></i>
+
+              </div>
+  
+              <div class="tamaño cambios">
+                  <h2>Planeamiento</h2>
+                  <p>Realizamos una exhaustiva investigación y levantamiento de requerimientos a nuestros clientes realizando Inspecciones Técnicas para definir las posibilidades de realización del proyecto. Generación de planos estructurales y posterior construcción del servicio o proyecto</p>
+              </div>
+          </div>
+      
+          <div class="contenido">
+              <div class="editar">
+                <i class="fa-solid fa-cog"></i>
+              </div>
+              <div class="tamaño">
+                  <h2>Implementacion e instalacion
+                  </h2>
+                  <p>Ponemos a su disposición, profesionales con una sólida formación académica y entrenamiento según estándares internos, tanto en materias técnicas como de gestión y administración de proyectos, junto a esto el mejor respaldo técnico y equipamiento acorde a sus objetivos.
+                    
+                  </p>
+              </div>
+          </div>
+        </div>
+      </div>
+             
+      </div>
+
+      <div class="final" id="contacto">
+
+      <div class="prueba">
+       <div class="contenidos">
+         <h2 class="fade-in">Contáctanos</h2>
+       <p class="fade-in">
+           En KONTRASUM SPA, estamos listos para ayudarte a mantener tus sistemas de refrigeración en perfectas condiciones. ¡No dudes en contactarnos hoy mismo para una consulta gratuita!
+       </p>
+       
+       <p class="fade-in">
+           Tu satisfacción es nuestra prioridad, y estamos aquí para ofrecerte un servicio excepcional que marque la diferencia.
+       </p>
+   
+       
+           <i class="fa-solid fa-phone"></i> +56976741462 +56953552692 | <i class="fa-solid fa-envelope"></i> Kontrasumspa@gmail.com |
+           <i class="fab fa-instagram"></i>@Kontrasumspa
+       <footer class="fade-in">
+           <p class="fade-in">
+               KONTRASUM SPA — Donde la refrigeración y Climatización se encuentra con la excelencia.
+           </p>
+       </footer>
+       </div>
+        </div>
+
+        
+
+        <script src="javascript.js"></script>
+
+ </body>
+</html>       

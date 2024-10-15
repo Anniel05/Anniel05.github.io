@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="./normalize.css/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="icon" href="./imagenes/logo.jfif" type="image/x-icon">
+    <title>KONTRASUM SPA</title>
+</head>
+<body>
+    
+    <header>
+        
+        <img src="./imagenes/logo-remove.png" alt="" class="logo">
+        <input type="checkbox" id="check">
+        <label for="check" class="mostrar"><i class="fa-solid fa-bars"></i></label>
+      
+
+        <nav class="nav">
+            <a href="../index.html" class="nav-a"><i class="fa-solid fa-house"></i>Inicio</a>
+            <a href="../seccion-contactanos/contactanos.html" class="nav-a"><i class="fa-solid fa-user"></i>Nosotros</a>
+            <i class="fa-solid fa-paper-plane"></i>
+            <select class="nav-select" id="servicios" onchange="location = this.value;">
+                <option value="" class="etiqueta" disabled selected hidden>Servicios</option>
+                <option value="../index.html#servici">Servicios</option>
+                <option value="../seccion-contactos/section.html" class="nav-option">Cámaras Frigoríficas</option>
+                <option value="../seccion-instalacion/instalacion.html" class="nav-option">Instalación de Equipos</option>
+                <option value="../seccion-reparacion-mantenimiento/reparacion.html" class="nav-option">Reparaciones de Equipos</option>
+                <option value="../seccion-refrigeracion-industrial/index.html" class="nav-option">Refrigeración Comercial e Industrial</option>
+                <option value="../plan-de-mantenimiento/index.html"class="nav-option">Planes de Mantención</option>
+                <option value="../asistencia/index.html" class="nav-option">Asistencia 24 / 7</option>
+            </select>
+
+        
+            <a href="../index.html#contacto" class="nav-a"><i class="fa-solid fa-phone"></i>Contactos</a>
+            <label for="check" class="esconder"><i class="fa-solid fa-x"></i></label>
+        </nav>
+    </header>
+
+
+    <section class="camaras">
+        <div class="container">
+            <div class="titulo-container">
+                <h2 class="titulo3">Reparacion de Equipos</h2>
+            </div>
+            <div class="carrusel-container">
+                <div class="carrusel">
+                    <img class="active" src="./imagenes/1.jpg" alt="Imagen 1">
+                    <img src="./imagenes/2.jpg" alt="Imagen 2">
+                    <img src="./imagenes/3.jpg" alt="Imagen 3">
+                    <img src="./imagenes/4.jpg" alt="Imagen 4">
+                    <img src="./imagenes/5.jpg" alt="Imagen 5">
+                    <img src="./imagenes/6.jpg" alt="Imagen 6">
+                    <img src="./imagenes/7.jpg" alt="Imagen 7">
+                    <img src="./imagenes/8.jpg" alt="Imagen 8">
+                    <img src="./imagenes/temperado de piscina2.jpg" alt="Imagen 9">
+                    <img src="./imagenes/helado2.jfif" alt="Imagen 10">
+                    <img src="./imagenes/maquina de hielo.jfif" alt="Imagen 10">
+            
+                    <!-- Agrega más imágenes según sea necesario -->
+                    <a href="#" id="anterior" class="boton">&lsaquo;</a>
+                    <a href="#" id="siguiente" class="boton">&rsaquo;</a>
+            
+                </div>
+    
+                <div class="frigorificos">
+                    <p>Cuando tu equipo de refrigeración y climatización necesita atención, cada detalle importa. En nuestro servicio de reparación, no solo solucionamos problemas; restauramos la tranquilidad en tu hogar o negocio. Nuestros técnicos expertos diagnostican con precisión y utilizan piezas de alta calidad, asegurando un rendimiento óptimo y duradero.</p>
+
+                    <p> Sabemos lo importante que es mantener un ambiente fresco y cómodo, especialmente en los días calurosos. Por eso, nos comprometemos a ofrecerte un servicio rápido y confiable, porque tu satisfacción es nuestra prioridad. Con nosotros, puedes estar seguro de que tu equipo estará en manos de profesionales dedicados que trabajan con pasión y esmero.</p>
+
+                    <p>Déjanos cuidar de tu refrigeración y climatización para que tú puedas disfrutar de un espacio agradable y libre de preocupaciones. Contáctanos hoy y siente la diferencia de un servicio excepcional.</p>
+                   
+                </div>
+    
+            </div>
+
+            <h4>Equipos que Reparamos</h4>
+            <ul>
+                <li>Reparacion de equipos de aire acondicionado VRF, Chiller, Split, split ducto, piso Cielo, compacto.</li>
+                <li>Congelador.</li>
+                <li>Refrigerador</li>
+                <li>Cámaras de frío.</li>
+                <li>Visicooler.</li>
+                <li>Exhibidora.</li>
+                <li>Vitrina.</li>
+                <li>Cecineras.</li>
+                <li>Máquinas de Helados Soft.</li>
+                <li>Máquinas de Hielo.</li>
+                <li>Temperado de Piscinas.</li>
+            </ul>
+        </div>
+    </section>
+
+    <script src="javascript.js"></script>
+
+</body>
+</html>

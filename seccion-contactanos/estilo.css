@@ -1,0 +1,224 @@
+
+body {
+    font-family: 'Arial', sans-serif; /* Fuente general */
+    margin: 0;
+    padding: 0;
+
+}
+
+.logo{
+    width:200px;
+    height:200px;
+}
+
+header{
+    padding:0px 50px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 200;
+    background-color: #fcfcfc;
+    width: 100%;
+    height:120px;
+    margin-top:-40px;
+    border-radius:0px 0px 20px 20px;
+}
+
+.nav-a{
+    text-decoration: none;
+    padding: 0px 5px;
+    font-size: 20px;
+    color: rgb(65, 63, 63);
+    transition: .2s;
+    
+}
+
+i{
+    padding: 0px 5px;
+    font-size: 20px;
+    color: rgb(65, 63, 63);
+}
+
+
+.nav-a:hover{
+ color:  #00698f;
+}
+
+.mostrar{
+    order: 1;
+    display: none;
+    border: 1px solid black;
+    border-radius:5px;
+}
+
+.esconder{
+    display: none;
+}
+
+#check{
+display: none;
+}
+
+
+
+
+
+@media (max-width: 840px) {
+
+    .mostrar{
+      display: block;
+    }
+  
+  
+  
+    .nav-select{
+      background-color: inherit;
+    }
+  
+    .nav{
+      position:fixed;
+      width: 100%;
+      height: 100vh;
+      background:white;
+      padding: 0px 20px;
+      text-align:end;
+      left: 0;
+      top:120px;
+      display: none;
+      z-index: 10;
+    
+      
+    }
+  
+    .nav.show{
+      display: block;
+    }
+  
+    .nav-a{
+     display: block;
+     padding: 10px 0px;
+     
+    }
+  
+    
+  
+     .esconder{
+      position:absolute;
+      right:50px;
+      top:-91px;
+       }
+  
+  
+    .esconder.show{
+      display: block;
+    }
+     
+    .mostrar.hide{
+      display: none;
+    }
+  
+
+   
+  }
+
+  .nav-select {
+    margin: 0 15px;
+    padding: 0px 5px;
+    border: none; /* Sin bordes */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color:#fcfcfc; /* Color de fondo */
+    color: #333; /* Color del texto */
+    appearance: none; /* Quitar el estilo por defecto */
+    cursor: pointer; /* Cambiar el cursor */
+    width:90px;
+    font-size: 20px;
+    margin-left: -9px;
+  }  
+
+
+
+
+section p{
+
+    padding: 10px 0px;
+    font-size:18px;
+    color: #333;
+}
+
+.ul-li{
+    text-decoration: none;
+    padding: 5px 0px;
+    font-size:18px;
+    color:#333
+}
+
+
+section {
+    margin: 40px auto; /* Centrar la sección */
+    padding:130px 50px; /* Asegúrate de que esto sea igual a la altura de tu header */
+    background: white; /* Fondo blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    
+}
+
+h1 {
+    font-size: 2.5em; /* Tamaño del encabezado principal */
+    color: #005f8d; /* Color del título */
+    text-align: center; /* Centrar el título */
+}
+
+h2 {
+    font-size: 1.8em; /* Tamaño de subtítulos */
+    color: #00698f; /* Color de subtítulos */
+    margin-top: 20px; /* Espaciado superior */
+    padding: 10px 0px;
+}
+
+p {
+    font-size: 1.1em; /* Tamaño de texto */
+    color: #333; /* Color del texto */
+    margin-bottom: 15px; /* Espaciado inferior */
+}
+
+strong {
+    color: #005f8d; /* Color para texto en negrita */
+}
+
+footer {
+    margin-top: 30px; /* Espaciado superior */
+    text-align: center; /* Centrar texto */
+    font-size: 0.9em; /* Tamaño de texto más pequeño */
+    color: #666; /* Color de texto del pie */
+}
+
+/* Estilos para enlaces */
+a {
+    color: #005f8d; /* Color de enlaces */
+    text-decoration: none; /* Sin subrayado */
+}
+
+a:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+.fade-in {
+    opacity: 0; /* Inicialmente oculto */
+    transform: translateY(20px); /* Mueve un poco hacia abajo */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Transiciones suaves */
+}
+
+.fade-in.visible {
+    opacity: 1; /* Muestra el elemento */
+    transform: translateY(0); /* Regresa a la posición original */
+}
+
+.fade-section {
+    max-width: 800px; /* Ancho máximo */
+    margin: 40px auto; /* Centrar la sección */
+    padding: 50px; /* Espaciado interno */
+    background: white; /* Fondo blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
